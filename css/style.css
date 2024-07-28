@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif; /* Tipo de fuente */
+    display: flex; /* Utiliza flexbox */
+    flex-direction: column; /* Direcciona el contenido en columna */
+    align-items: center; /* Alinea el contenido al centro horizontalmente */
+    justify-content: center; /* Alinea el contenido al centro verticalmente */
+    height: 100vh; /* Altura de la ventana */
+    background-color: #cbcacc; /* Color de fondo */
+}
+#game-board {
+    display: grid; /* Usa display grid */
+    grid-template-columns: repeat(4, 100px); /* Cuatro columnas de 100px */
+    grid-gap: 10px; /* Espacio entre los elementos */
+}
+.card {
+    width: 100px; /* Ancho de las tarjetas */
+    height: 100px; /* Altura de las tarjetas */
+    background-color: #528280; /* Color de fondo de las tarjetas */
+    display: flex; /* Usa display flex */
+    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    font-size: 24px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre la tarjeta */
+}
+.card.flipped, .card.matched {
+    background-color: #fff; /* Color de fondo cuando la tarjeta está volteada o emparejada */
+}
+#controls {
+    margin-top: 20px; /* Margen superior */
+}
+#message {
+    margin-top: 20px; /* Margen superior */
+    font-size: 24px; /* Tamaño de fuente */
+    color: green; /* Color del texto */
+}
+#timer {
+    font-size: 24px; /* Tamaño de fuente */
+}
+#resetGame{
+    width: 200px;
+    font-size: 1.5rem;
+}
+@media screen and (max-width:760px) {
+    .card{
+        width: 80px;
+        height: 80px;
+    }
+    #game-board {
+        display: grid; /* Usa display grid */
+        grid-template-columns: repeat(4, 80px); /* Cuatro columnas de 100px */
+        grid-gap: 10px; /* Espacio entre los elementos */
+    }
+    
+}
